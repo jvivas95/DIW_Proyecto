@@ -71,16 +71,56 @@ body{
 	color: inherit;
 	text-decoration: none;
 }
-#carrousel{
-	background-color: black;
+#HeroImage{
+	background-color: rgb(243, 223, 134);
 	width: 100%;
-	height: 350px;
+	height: 1076px;
 }
-#body{
-	width: 70%;
+#TituloSubtituloHeroimage{
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+
+}
+#TituloHeroImage{
+	font-size: 70px;
+	color: white;
+	-webkit-text-stroke: 1px black;
+}
+#SubtituloHeroImage {
+	font-size: 40px;
+	color: white;
+	-webkit-text-stroke: 0.5px black;
+
+
+}
+#SeccionConocenos{
+	width: 100%;
 	height: auto;
 	margin: auto;
+	padding-top: 30px;
 	padding-bottom: 30px;
+}
+#TituloConocenos{
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	font-size: 46px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: underline;
+}
+#TextoConocenos{
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 50px;
+	font-size: 32px;
+	text-align: justify;
 }
 #botonCita{
 	width: 200px;
@@ -117,23 +157,7 @@ body{
 #footer div:last-child {
     padding-right: 0; /* Elimina el espacio interno del último elemento */
 }
-#tituloBody{
-	font-size: 40px;
-	padding-top: 30px;
-	display: flex;
-	justify-content: center;
-	padding-bottom: 15px;
-	font-family: "M PLUS Rounded 1c", sans-serif;
-	font-size: 46px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: underline;
-}
-#textBody{
-	font-size: 24px;
-	text-align: justify;
-}
+
 #contenedorServicios{
 	width: 90%;
 	height: auto;
