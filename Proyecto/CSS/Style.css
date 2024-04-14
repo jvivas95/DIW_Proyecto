@@ -43,6 +43,7 @@ nav{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 43px;
 	
 }
 #rrss{
@@ -67,11 +68,9 @@ nav{
 	height: auto;
 	overflow: hidden;
 	color: white;
-	font-size: 26px;
+	font-size: 48px;
 	display: flex;
 	justify-content: center;
-
-
 }
 #NavBar a {
     display: inline-block; 
@@ -109,12 +108,12 @@ nav{
 
 }
 #TituloHeroImage{
-	font-size: 70px;
+	font-size: 96px;
 	color: white;
 	-webkit-text-stroke: 1px black;
 }
 #SubtituloHeroImage {
-	font-size: 40px;
+	font-size: 64px;
 	color: white;
 	-webkit-text-stroke: 0.5px black;
 }
@@ -139,11 +138,12 @@ nav{
 	text-decoration: underline;
 }
 #TextoConocenos{
-	padding-left: 215px;
-	padding-right: 215px;
+	width: 1450px;
+	height: auto;
 	padding-top: 50px;
 	font-size: 32px;
 	text-align: justify;
+	margin: 0 auto;
 }
 #SeccionServicios{
 	width: 100%;
@@ -194,7 +194,8 @@ nav{
 	height: auto;
 	margin: auto;
 	padding-top: 30px;
-	padding-bottom: 30px;
+	margin-bottom: 730px;
+
 }
 #TituloContacto{
 	font-size: 40px;
@@ -209,53 +210,64 @@ nav{
 }
 #Mapa{
 	margin-top: 50px;
-	margin-left: 60px;
-	margin-right: 60px;
-	width: 100%;
+	width: 1720px;
 	height: 600px;
-	display: flex;
-	
-}
-#ImgMapa{
 	margin: 0 auto;
+
 }
+
 #TituloFormulario{
 	padding-top: 50px;
-	padding-left: 60px;
+	padding-left: 102px;
 	font-weight: bold;
 	text-decoration: underline;
-	font-size: 25px;
+	font-size: 48px;
 	width: 100%;
 	height: auto;
 }
 #ContenedorContacto{
-	width: 100%;
+	width: auto;
 	height: auto;
 	padding-top: 10px;
-	padding-left: 15px;
+	margin-left: 102px;
+	margin-right: 102px;
 	display: flex;
+	font-size:48px;
+	justify-content: space-between;
 }
 #Formulario{
-	width: 50%;
+	width: 875px;
 	height: auto;
-	margin-left: 50px;
 }
 #datosContacto{
-	width: 50%;
+	width: 730px;
 	height: auto;
+	float: right;
 }
 .bold{
 	font-weight: bold;
 }
 #botonEnviar{
  	margin-top: 10px;
- 	margin-left: 64px;
- 	width: 80px;
- 	height: 40px;
+ 	margin-left: 102px;
+ 	width: 201px;
+ 	height: 90px;
  	border-radius: 10%;
  	background-color: #364F6B;
  	color: white;
+	font-size: 48px;
  }
+input{
+	width: 871px;;
+	height: 72px;
+}
+textarea{
+	width: 871px;;
+	height: 297px;
+}
+
+
+
 #footer div {
     display: inline-block; 
     padding-right: 60px; /
@@ -265,13 +277,26 @@ nav{
 }
 #footer{
 	width: 100%;
-	height: 90px;
+	height: 174px;
 	background-color: #364f6b;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: 20px;
 	color: white;
-	font-size: 26px;
+	font-size: 48px;
+	text-decoration: none;
 }
-
+#footer ul{
+	list-style-type: none;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 102px;
+	padding-right: 102px;
+}
+#footer ul li{
+	display: inline-block;
+	margin: 0 10px;
+}
