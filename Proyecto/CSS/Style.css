@@ -19,7 +19,7 @@ nav{
 	background-color: #364F6B;
 	display: flex;
 	flex-wrap: wrap;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -113,11 +113,28 @@ nav{
 	font-size: 96px;
 	color: white;
 	-webkit-text-stroke: 1px black;
+	animation-name: fadein;
+	animation-duration: 4s;
 }
 #SubtituloHeroImage {
 	font-size: 64px;
 	color: white;
 	-webkit-text-stroke: 0.5px black;
+	animation-name: fadeinSubtitulo;
+	animation-duration: 6s;
+
+}
+@keyframes fadein {
+	0% { opacity: 0; transform: translateY(100%); }
+	75% { opacity: 1; }
+	100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeinSubtitulo {
+	0% { opacity: 0; }
+	10% { opacity: 0; }
+	40% { opacity: 0.2; }
+	70% { opacity: 0.5; }
+	100% { opacity: 1; }
 }
 #SeccionConocenos{
 	width: 100%;
