@@ -3,20 +3,60 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 body{
 	background-color: #67CED4;
 	font-family: "M PLUS 1p", sans-serif;
-
-
 }
+
+/* FORMATOS MODAL DE BIENVENIDA */
+#ModalBienvenida{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	display: none;
+	z-index: 5;
+}
+#ModaleBoxB{
+	width: 800px;
+	height: 500px;
+	background-color: #364f6b8f;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+}
+#ModaleBoxB>h1{
+	font-size: 4rem;
+	/* text-align: center; */
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	font-weight: normal;
+	margin-bottom: 100px;
+	color: white;
+}
+#ModaleBoxB> button{
+	font-family: "M PLUS 1p", sans-serif;
+	font-size: 2rem;
+	padding: 20px 40px;
+	border-radius: 15px;
+	background-color: #364F6B;
+	color: white;
+}
+#ModaleBoxB> button:hover{
+	color: #67CED4;
+	background-color: white;
+}
+
 /* Encabezado y Navbar */
 nav{
 	width: 100%;
-	height: auto;
+	height: 285px;
 	padding-left: 112px;
 	padding-right: 112px;
-	background-color: #364F6B;
+	background-color:   #364f6b8f;
 	display: flex;
 	flex-wrap: wrap;
 	/*overflow: hidden;*/
@@ -24,13 +64,18 @@ nav{
 	top: 0;
 	left: 0;
 	z-index: 1;
+	justify-content: space-between;
+	transition-property: top, height, font-size, padding-top, display;
+	transition-duration: 2s;
+	
 }
+
 #telefono{
 	width: 351px;
-	font-size: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: white;
 }
 #rrss{
 	width: 351px;
@@ -38,6 +83,8 @@ nav{
 	display: flex;
 	justify-content: right;
 	align-items: center;
+	transition-property: display;
+	transition-duration: 2s;
 }
 #logo{
 	width: 975px;
@@ -45,21 +92,26 @@ nav{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition-property: display;
+	transition-duration: 2s;
 }
 #logo img{
 	width: 538px;
 	height: 211px;
 	border-radius: 43px;
 	margin: 0 auto;
+
 }
 #iconFacebook img{
 	border: 5px solid white;
 	border-radius: 30px;
+
 }
 #iconInstagram img,
 #iconTiktok img{
 	border: 5px solid white;
 	border-radius: 40px;
+
 }
 
 
@@ -70,9 +122,10 @@ nav{
 	height: auto;
 	overflow: hidden;
 	color: white;
-	font-size: 48px;
 	display: flex;
 	justify-content: center;
+	list-style: none;
+
 }
 #NavBar a {
     display: inline-block; 
@@ -82,23 +135,57 @@ nav{
 	transition-property: color;
 	transition-duration: 0.7s;
 }
-.ElementoNavbar{
+.ElementoNavbar>a{
 	display: inline-block;
 	margin: 0 90px;
+	position: relative;
+	z-index: 2;
 }
 #NavBar .ElementoNavbar:hover a {
     color: #67CED4;
 }
 
+/* INICIO SUBMENU NAVBAR */
+#SubNavbar{
+	width: 180px;
+	height: 150px;
+	list-style: none;
+	z-index: 1;
+	top: 100%;
+	margin-top: -10px;
+	margin-left: 90px;
+	display: none;
+	background-color:   #364f6b8f;
+}
+
+.ElementoSubNavbar{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+.ElementoSubNavbar > a{
+	text-decoration: none;
+	color: white;
+	transition-property: color;
+	transition-duration: 0.7s;
+}
+#NavBar #SubNavbar .ElementoSubNavbar >a:hover{
+	color: white;
+}
+/* ESTA REGLA PERMITE DESPLEGAR EL SUBMENU NAVBAR */
+.ElementoNavbar:hover #SubNavbar {
+	display: block;
+}
 
 #HeroImage{
 	background-color: rgb(243, 223, 134);
 	width: 100%;
 	height: 1076px;
-	margin-top: 240px;
 	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../Media/HeroImage.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	z-index: 0;
+	position: relative;
 }
 
 #TituloSubtituloHeroimage{
@@ -140,7 +227,7 @@ nav{
 	width: 100%;
 	height: auto;
 	margin: auto;
-	padding-top: 30px;
+	padding-top: 280px;
 	padding-bottom: 30px;
 
 
@@ -164,16 +251,20 @@ nav{
 	text-align: justify;
 	margin: 0 auto;
 }
+
+/* SECCION SERVICIOS */
 #SeccionServicios{
 	width: 100%;
-	height: 1068px;
+	height: 1280px;
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../Media/HeroImage_2.jpg);
 	background-color: rgb(243, 223, 134);
 	margin: auto;
-	padding-top: 30px;
 	padding-bottom: 30px;
+	margin-top: 280px;
+	color: white;
 }
 #TituloServicios{
-	margin-top: 50px;
+	padding-top: 300px;
 	font-size: 40px;
 	display: flex;
 	justify-content: center;
@@ -190,25 +281,36 @@ nav{
 	margin: 0 auto;
 	margin-top: 33px;
 	overflow: hidden;
+	z-index: 0;
+}
+.PestanaActiva{
+	color: #67CED4;
+	text-decoration: underline;
 }
 .EtiquetaPestanas{
 	width: 33.33%;
 	font-size: 40px;
-	color: white;
-	float: left;
+/* 	color: white;
+ */	float: left;
 	text-align: center;
 }
-#ContenedorServicios{
+.EtiquetaPestanas >a{
+	text-decoration: none;
+}
+.ContenedorPestana{
 	width: 1450px;
 	height: 660px;
 	margin-top: 44px;
-	background-color: whitesmoke;
-	margin-left: auto;
+/* 	background-color: whitesmoke;
+ */	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
 	justify-content: space-between;
+}
+#CServicios{
+	display: flex;
 }
 .servicios{
 	width: 380px;
@@ -216,6 +318,15 @@ nav{
 	text-align: center;
 	border-style: solid;
 	float: left;
+	font-size: 34px;
+}
+@keyframes animServicios {
+	from{ transform: scale(0.25,0.25);};
+	to{transform: scale(1,1);};
+}
+.servicioAnimado{
+	animation-name: animServicios;
+	animation-duration: 1.5s;
 }
 .imgServicios{
 	width: 100%;
@@ -232,11 +343,73 @@ nav{
 .imgServicios img:hover{
 	transform: scale(1.2,1.2);
 }
+.imgServicios:hover {
+    box-shadow: 0px 0px 7px 4px #67CED4;
+	cursor: pointer;
+}
+
+/* MODAL GALERIA LIGHTBOX */
+#ModalLightBoxG{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	display: none;
+	top: 0;
+	z-index: 5;
+}
+#ImageToShow{
+	width: auto;
+	height: auto;
+/* 	background-color: #364f6b8f;
+ */	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+/* 	padding: 50px;
+ */	text-align: center;
+	border-radius: 25px;
+}
+.ImageLightBox{
+	width: 600px;
+	height: auto;
+	border-radius: 25px;
+}
+.LbButtons{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: black;
+	border-style: solid;
+	border-width: 5px;
+	border-color: white;
+}
+.LbButtons:hover{
+	border-color: #364F6B;
+}
+.LbbRight{
+	right: 30px;
+}
+.LbbLeft{
+	left: 30px;
+}
+.LbButtons i{
+	font-size: 4rem;
+	color: white;
+}
+.LbButtons:hover i{
+	color: #364F6B;
+}
+
+/* SECCION CONTACTO */
 #SeccionContacto{
 	width: 100%;
 	height: auto;
 	margin: auto;
-	padding-top: 30px;
+	padding-top: 280px;
 	margin-bottom: 730px;
 
 }
@@ -298,9 +471,10 @@ nav{
  	border-radius: 10%;
  	background-color: #364F6B;
  	color: white;
-	font-size: 48px;
+	font-size: 36px;
 	transition-property: color, border-style, background-color;
 	transition-duration: 0.7s;
+	text-align: center;
  }
  #botonEnviar:hover{
 	border-style: 5px solid;
@@ -311,14 +485,65 @@ nav{
 input{
 	width: 871px;;
 	height: 72px;
+	font-size: 38px;
 }
 textarea{
 	width: 871px;;
 	height: 297px;
+	font-size: 38px;
 }
 
+/* FORMATOS MODAL DE RESERVA */
+#ModalDeReserva{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0px;
+	display: none;
+	z-index: 5;
+}
+#ModaleBoxR{
+	width: 800px;
+	height: 325px;
+	background-color: #364f6b8f;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+}
+#ModaleBoxR>h1{
+	font-size: 3rem;
+	/* text-align: center; */
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	font-weight: normal;
+	margin-bottom: 10px;
+	color: white;
+}
+#ModaleBoxR>p{
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: normal;
+	color: white;
+	margin-bottom: 20px;
+}
+#ModaleBoxR> button{
+	font-family: "M PLUS 1p", sans-serif;
+	font-size: 2rem;
+	padding: 10px 15px;
+	border-radius: 15px;
+	background-color: #364F6B;
+	color: white;
+}
+#ModaleBoxR> button:hover{
+	color: #67CED4;
+	background-color: white;
+}
 
-
+/* FOOTER */
 #footer div {
     display: inline-block; 
     padding-right: 60px; /

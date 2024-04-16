@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AMIVET</title>
 	<link rel="stylesheet" type="text/css" href="CSS/Style.css">
+	<script src="JS/Scripts.js"></script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +17,23 @@
 	<!-- M PLUS ROUNDED 1C-->
 	<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 
+	<!-- ICONOS FONT AWSOME -->
+	<script src="https://kit.fontawesome.com/36ccf00db7.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 
+	<!-- MODAL DE BIENVENIDA -->
+	<div id="ModalBienvenida">
+		<div id="ModaleBoxB">
+			<h1>Bienvenido a la web AMIVET</h1>
+			<button onclick="cerrarMBB()">Empieza</button>
+		</div>
+	</div>
+
 	<!-- CABECERA -->
-	<nav>
+	<nav id="NavBarP">
 		<div id="telefono">
 			<div id="iconTelefono"></div>
 			<div>+34 999-999-999</div>
@@ -46,9 +59,9 @@
 			<li class="ElementoNavbar"><a href="#SeccionConocenos">Conócenos</a></li>
 			<li class="ElementoNavbar"><a href="#SeccionServicios">Servicios</a>
 				<ul id="SubNavbar">
-					<li class="">Servicios</li>
-					<li>Tarifas</li>
-					<li>Duración</li>
+					<li class="ElementoSubNavbar"><a href="#SeccionServicios" onclick="marcarPestana('CServicios', 'tabServicios')">Servicios</a></li>
+					<li class="ElementoSubNavbar"><a href="#SeccionServicios" onclick="marcarPestana('CTarifas', 'tabTarifas')">Tarifas</a></li>
+					<li class="ElementoSubNavbar"><a href="#SeccionServicios" onclick="marcarPestana('CDuracion', 'tabDuracion')">Duración</a></li>
 				</ul>
 			</li>
 			<li class="ElementoNavbar"><a href="#SeccionContacto">Contacto</a></li>
@@ -83,52 +96,150 @@
 
 	<!-- SECCION SERVICIOS -->
 	<section id="SeccionServicios">
-		<div id="TituloServicios">
+		<div id="TituloServicios" onclick="ModalLightBoxG()">
 			<h1>Servicios AMIVET</h1>
 		</div>
 		<div id="Pestanas">
-			<p class="EtiquetaPestanas">Servicios</p>
-			<p class="EtiquetaPestanas">Tarifas</p>
-			<p class="EtiquetaPestanas">Duración</p>
+			<p id="tabServicios" class="EtiquetaPestanas PestanaActiva" onclick="marcarPestana('CServicios', 'tabServicios')">Servicios</p>
+			<p id="tabTarifas" class="EtiquetaPestanas" onclick="marcarPestana('CTarifas', 'tabTarifas')">Tarifas</p>
+			<p id="tabDuracion" class="EtiquetaPestanas" onclick="marcarPestana('CDuracion', 'tabDuracion')">Duración</p>
 		</div>
-		<div id="ContenedorServicios">
-			<div class="servicios">
+
+		<!-- CONTENEDOR SERVICIOS -->
+		<div class="ContenedorPestana" id="CServicios">
+			<div class="servicios servicioAnimado">
 				<div class="imgServicios">
-					<img src="Media/OK_ConsultaGeneral.jpg" alt="">
+					<img class="ImgServ" src="Media/OK_ConsultaGeneral.jpg" alt="">
 				</div>
 				<p>Consulta general</p>
 			</div>
 			<div class="servicios">
 				<div class="imgServicios">
-					<img src="Media/OK_Vacunas.jpg" alt="">
+					<img class="ImgServ" src="Media/OK_Vacunas.jpg" alt="">
 				</div>
 				<p>Vacunas</p>
 			</div>
 			<div class="servicios">
 				<div class="imgServicios">
-					<img src="Media/OK_Odontologia.jpg" alt="">
+					<img  class="ImgServ" src="Media/OK_Odontologia.jpg" alt="">
 				</div>
 				<p>Odontologia</p>
 			</div>
 			<div class="servicios">
 				<div class="imgServicios">
-					<img src="Media/OK_Ecografia.jpg" alt="">
+					<img class="ImgServ" src="Media/OK_Ecografia.jpg" alt="">
 				</div>	
 				<p>Ecografías y RX</p>
 			</div>
 			<div class="servicios">
 				<div class="imgServicios">
-					<img src="Media/OK_ConsultaDomicilio.jpg" alt="">
+					<img class="ImgServ" src="Media/OK_ConsultaDomicilio.jpg" alt="">
 				</div>
 				<p>Consulta a domicilio</p>
 			</div>
 			<div class="servicios">
 				<div class="imgServicios">
-					<img src="Media/OK_Cirugia.jpg" alt="">
+					<img  class="ImgServ" src="Media/OK_Cirugia.jpg" alt="">
 				</div>
 				<p>Cirugía</p>
 			</div>
 		</div>
+
+		<!-- CONTENEDOR TARIFAS -->
+		<div class="ContenedorPestana" id="CTarifas">
+			<div class="servicios">
+				<div class="imgServicios">
+					<img class="ImgServ" src="Media/Tarifa_ConsultaGeneral.jpg" alt="">
+				</div>
+				<p>Consulta general</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img class="ImgServ" src="Media/Tarifa_Vacunas.jpg" alt="">
+				</div>
+				<p>Vacunas</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img  class="ImgServ" src="Media/Tarifa_Odontologia.jpg" alt="">
+				</div>
+				<p>Odontologia</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img class="ImgServ" src="Media/Tarifa_Ecografia.jpg" alt="">
+				</div>	
+				<p>Ecografías y RX</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img class="ImgServ" src="Media/Tarifa_ConsultaDomicilio.jpg" alt="">
+				</div>
+				<p>Consulta a domicilio</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img  class="ImgServ" src="Media/Tarifa_Cirugia.jpg" alt="">
+				</div>
+				<p>Cirugía</p>
+			</div>
+		</div>
+
+		<!-- CONTENEDOR DURACIÓN -->
+		<div class="ContenedorPestana" id="CDuracion">
+			<div class="servicios">
+				<div class="imgServicios">
+					<img class="ImgServ" src="Media/Duracion_ConsultaGeneral.jpg" alt="">
+				</div>
+				<p>Consulta general</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img class="ImgServ" src="Media/Duracion_Vacunas.jpg" alt="">
+				</div>
+				<p>Vacunas</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img  class="ImgServ" src="Media/Duracion_Odontologia.jpg" alt="">
+				</div>
+				<p>Odontologia</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img class="ImgServ" src="Media/Duracion_Ecografia.jpg" alt="">
+				</div>	
+				<p>Ecografías y RX</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img class="ImgServ" src="Media/Duracion_Domicilio.jpg" alt="">
+				</div>
+				<p>Consulta a domicilio</p>
+			</div>
+			<div class="servicios">
+				<div class="imgServicios">
+					<img  class="ImgServ" src="Media/Duracion_Cirugia.jpg" alt="">
+				</div>
+				<p>Cirugía</p>
+			</div>
+		</div>
+
+
+	<!-- MODAL GALERIA -->
+	<div id="ModalLightBoxG">
+		<div id="ImageToShow">
+			
+		</div>
+		<button class="LbButtons LbbRight" onclick="nextImg()">
+			<i class="fa-solid fa-angles-right"></i>
+		</button>
+
+		<button class="LbButtons LbbLeft" onclick="prevImg()">
+			<i class="fa-solid fa-angles-left"></i>
+		</button>
+	</div>
+
 	</section>
 
 	<!-- SECCION CONTACTO -->
@@ -143,13 +254,13 @@
 		<div id="ContenedorContacto">
 			<form action="" id="Formulario">
 				<p id="tituloForm">Nombre y Apellido</p>
-				<input type="text" name="Nom bre">
+				<input type="text" name="Nombre" id="FormNombre" required>
 				<p id="tituloForm">Teléfono</p>
-				<input type="number" name="telefono">
+				<input type="number" name="telefono" id="FormTelefono" required>
 				<p id="tituloForm">Email</p>
-				<input type="email" name="correo">
+				<input type="email" name="correo" id="FormEmail" required>
 				<p id="tituloForm">Mensaje</p>
-				<textarea name="mensaje" rows="9" cols="40" maxlength="300"></textarea>
+				<textarea name="mensaje" rows="9" cols="40" maxlength="300" id="FormMensaje" required></textarea>
 			</form>
 			<div id="datosContacto">
 				<p class="bold">DONDE ESTAMOS</p>
@@ -163,8 +274,17 @@
 				<p>info@amivet.es</p>
 			</div>
 		</div>	
-		<input type="submit" name="ENVIAR" id="botonEnviar">
+		<input value="ENVIAR" id="botonEnviar" onclick="ModalReserva()">
 	</section>
+
+	<!-- MODAL DE RESERVA -->
+	<div id="ModalDeReserva">
+		<div id="ModaleBoxR">
+			<h1>Bienvenido a la web AMIVET</h1>
+			<p id="MensajeReserva">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, ipsam!</p>
+			<button onclick="CerrarMBR()">Empieza</button>
+		</div>
+	</div>
 
 	<!-- PIE DE PAGINA -->
 	<section id="footer">
@@ -174,6 +294,11 @@
 			<li>Cookies</li>
 		</ul>
 	</section>
+
+	<script>
+		//modalBienvenida();
+		readyLightbox();
+	</script>
 
 </body>
 </html>
