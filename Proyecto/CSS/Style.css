@@ -282,17 +282,26 @@ nav{
 	margin-top: 33px;
 	overflow: hidden;
 	z-index: 0;
+	display: flex;
+	justify-content: center;
 }
 .PestanaActiva{
 	color: #67CED4;
-	text-decoration: underline;
+	/*text-decoration: underline;*/
+	border-bottom-style: solid;
+
 }
 .EtiquetaPestanas{
-	width: 33.33%;
+	width: calc(33.33%-70px);
 	font-size: 40px;
 /* 	color: white;
  */	float: left;
 	text-align: center;
+	transition-property:  color, ;
+	transition-duration: 1s;
+	padding-bottom: 3px;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 .EtiquetaPestanas >a{
 	text-decoration: none;
@@ -316,7 +325,6 @@ nav{
 	width: 380px;
 	height: 300px;
 	text-align: center;
-	border-style: solid;
 	float: left;
 	font-size: 34px;
 }
@@ -339,14 +347,16 @@ nav{
 	height: 250px;
 	transition-property: transform;
 	transition-duration: 0.4s;
+	border-style: solid;
+	border-color: white;
 }
 .imgServicios img:hover{
 	transform: scale(1.2,1.2);
 }
-.imgServicios:hover {
+/*.imgServicios:hover {
     box-shadow: 0px 0px 7px 4px #67CED4;
 	cursor: pointer;
-}
+}*/
 
 /* MODAL GALERIA LIGHTBOX */
 #ModalLightBoxG{

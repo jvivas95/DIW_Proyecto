@@ -20,6 +20,11 @@
 	<!-- ICONOS FONT AWSOME -->
 	<script src="https://kit.fontawesome.com/36ccf00db7.js" crossorigin="anonymous"></script>
 
+	<!-- PRECARGA DE IMAGENES -->
+	<link rel="preload" as="image" href="Media/HeroImage.jpg">
+	<link rel="preload" as="image" href="Media/HeroImage_2.jpg">
+	<link rel="preload" as="image" href="Media/HeroImage_3.jpg">
+	<link rel="preload" as="image" href="Media/HeroImage_4.jpg">
 
 </head>
 <body>
@@ -107,7 +112,7 @@
 
 		<!-- CONTENEDOR SERVICIOS -->
 		<div class="ContenedorPestana" id="CServicios">
-			<div class="servicios servicioAnimado">
+			<div class="servicios">
 				<div class="imgServicios">
 					<img class="ImgServ" src="Media/OK_ConsultaGeneral.jpg" alt="">
 				</div>
@@ -297,6 +302,7 @@
 
 	<script>
 		//modalBienvenida();
+		setInterval(heroSlideShow,3000);
 		readyLightbox();
 	</script>
 

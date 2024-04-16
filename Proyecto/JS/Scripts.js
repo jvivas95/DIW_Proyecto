@@ -12,6 +12,29 @@ function cerrarMBB(){
     document.documentElement.style.overflow="auto";
 }
 
+//SLIDE SHOW AUTOMATICO
+var bgCounter=0;
+function heroSlideShow(){
+
+    var listaImgBg=[
+        "url('Media/HeroImage.jpg')",
+        "url('Media/HeroImage_2.jpg')",
+        "url('Media/HeroImage_3.jpg')",
+        "url('Media/HeroImage_4.jpg')"
+    ];
+
+    bgCounter++;
+
+    if (bgCounter==listaImgBg.length){
+        bgCounter=0;
+    }
+    
+    document.getElementById("HeroImage").style.backgroundImage = "linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),"+listaImgBg[bgCounter];
+    
+    
+}
+
+
 function ModalReserva(){
     document.getElementById("ModalDeReserva").style.display="block";
     document.documentElement.style.overflow="hidden";
@@ -217,9 +240,15 @@ function marcarPestana(contenedorAMostrar, tabClicada){
     document.getElementById(tabClicada).classList.add("PestanaActiva");
 
 
-    var servicios= document.getElementsByClassName("EtiquetaPestanas");
-    for (var i=0; i<servicios.length; i++){
-        servicios[i].classList.remove("servicioAnimado");
+    var Servicio= document.getElementsByClassName("servicios");
+    for (var i=0; i<Servicio.length; i++){
+        Servicio[i].classList.remove("servicioAnimado");
+    }
+
+    var serviciosC = document.getElementById(contenedorAMostrar).children;
+
+    for(var i=0; i<serviciosC.length; i++){
+        serviciosC[i].classList.add("servicioAnimado");
     }
 
 }
